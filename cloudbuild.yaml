@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['container', 'clusters', 'create', 'gke-cluster-$BRANCH_NAME', '--region=us-west1', '--num-nodes', '3']
+    args: ['container', 'clusters', 'create', 'gke-cluster-$BRANCH_NAME', '--zone=us-central1-c', '--num-nodes', '3']
     # args: ['beta', 'container', '--project', 'yesod-labo', 'clusters', 'create', 'cluster-$BRANCH_NAME', 
     #        '--zone', 'us-central1-c', '--no-enable-basic-auth', '--cluster-version', '1.14.10-gke.27', 
     #        '--machine-type', 'n1-standard-1', '--image-type', 'COS', '--disk-type', 'pd-standard', 
