@@ -9,7 +9,7 @@ bold() {
 }
 
 bold ". Checking cluster ${CLUSTER_NAME_PREFIX}$1 exist..."
-$CLUSTER_EXIST_CHECK_COMMAND
+$CLUSTER_EXIST_CHECK_COMMAND 2>&1 > /dev/null
 if [ $? -eq 0 ]; then
     bold "Cluster ${CLUSTER_NAME_PREFIX}$1 already exist."
     exit 0
